@@ -17,7 +17,7 @@
     Copyright (C) 2016  Gustavo E. Carr
     
     Huge thanks to the late Felipe Evans, Msc. Eng. for long hours chatting and teaching
-    me about programming among many other interesting topics.
+    me about programming among many other interesting topics, we all miss you a lot.
 
 
     IMPORTANT NOTICE:
