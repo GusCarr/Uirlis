@@ -1,0 +1,35 @@
+# This file defines the variables and calculi to be plot by Uirlis program.
+
+@CLASS          # This parameter name is the one that defines the model or equation name. 
+                # It must not be repeated because it could be accidentally overwritten by another.
+nombre = Polinomial
+
+
+@ATTRIBUTES     # The variables (to be modified on the fly at the program screen) are written after the tag @ATTRIBUTES:
+
+x = 0.0          // Independent variable or parameter.
+a0 = 0.0         // Constant.        
+a1 = 0.0         // Coefficient for x^1        # All these are comments.
+a2 = 0.0         // Coefficient for x^2
+a3 = 0.0         // Coefficient for x^3
+a4 = 0.0         // Coefficient for x^4
+a5 = 0.0         // Coefficient for x^5
+a6 = 0.0         // Coefficient for x^6
+
+@INDEPVAR      # Here is were we specicy which is the independent variable or free parameter,
+x              # the one that will be specified along a range defined at runtime by the user 
+               # by means of a list data type named 'lista'.
+
+
+@EVAL          # variables x_out and y_out are data lists to plot (x,y) and are mandatory.
+               # The code for the parametric equation is written here.
+
+for xi in x:
+
+    y = a0 + a1*xi + a2*xi**2 + a3*xi**3 + a4*xi**4 + a5*xi**5 + a6*xi**6
+    
+    x_out.append(xi)    # store the value of xi in the x axis output list.
+    y_out.append(y)     # store the value of yi in the y axis output list.
+    
+# end of file. This comment is not needed, it is here to show that this file was not truncated.
+

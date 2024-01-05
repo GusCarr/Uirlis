@@ -1,0 +1,64 @@
+# This file defines the variables and calculi to be plot by Uirlis program.
+
+@CLASS          # This parameter name is the one that defines the model or equation name. 
+                # It must not be repeated because it could be accidentally overwritten by another.
+nombre = SinesPlusCosines
+
+
+@ATTRIBUTES      # The variables (to be modified on the fly at the program screen) are written after the tag @ATTRIBUTES:
+
+t = 0.0          // Time.
+w = 0.0          // Fundamental frequency, in angular frequency units: (radians)/(time units).
+
+a0 = 0.0         // Constant (w=0).
+
+a1 = 0.0         // Amplitude for sin(wt) 
+b1 = 0.0         // Amplitude for cos(wt)
+
+a2 = 0.0         // Amplitude for sin(2wt) 
+b2 = 0.0         // Amplitude for cos(2wt)
+
+a3 = 0.0         // Amplitude for sin(3wt) 
+b3 = 0.0         // Amplitude for cos(3wt)
+
+a4 = 0.0         // Amplitude for sin(4wt) 
+b4 = 0.0         // Amplitude for cos(4wt)
+
+a5 = 0.0         // Amplitude for sin(5wt) 
+b5 = 0.0         // Amplitude for cos(5wt)
+
+a6 = 0.0         // Amplitude for sin(6wt) 
+b6 = 0.0         // Amplitude for cos(6wt)
+
+a7 = 0.0         // Amplitude for sin(7wt) 
+b7 = 0.0         // Amplitude for cos(7wt)
+
+a8 = 0.0         // Amplitude for sin(8wt) 
+b8 = 0.0         // Amplitude for cos(8wt)
+
+a9 = 0.0         // Amplitude for sin(9wt) 
+b9 = 0.0         // Amplitude for cos(9wt)
+
+a10 = 0.0         // Amplitude for sin(10wt) 
+b10 = 0.0         // Amplitude for cos(10wt)
+
+
+@INDEPVAR      # Here is were we specicy which is the independent variable or free parameter,
+t              # the one that will be specified along a range defined at runtime by the user 
+               # by means of a list data type named 'lista'.
+
+
+@EVAL          # variables x_out and y_out are data lists to plot (x,y) and are mandatory.
+               # The code for the parametric equation is written here.
+
+for ti in t:
+    
+    senos = a1*np.sin(w*ti)+a2*np.sin(2*w*ti)+a3*np.sin(3*w*ti)+a4*np.sin(4*w*ti)+a5*np.sin(5*w*ti)+a6*np.sin(6*w*ti)+a7*np.sin(7*w*ti)+a8*np.sin(8*w*ti)+a9*np.sin(9*w*ti)+a10*np.sin(10*w*ti)
+    
+    cosenos = b1*np.cos(w*ti)+b2*np.cos(2*w*ti)+b3*np.cos(3*w*ti)+b4*np.cos(4*w*ti)+b5*np.cos(5*w*ti)+b6*np.cos(6*w*ti)+b7*np.cos(7*w*ti)+b8*np.cos(8*w*ti)+b9*np.cos(9*w*ti)+b10*np.cos(10*w*ti)
+    
+    x_out.append(ti)                   # store the value of xi in the x axis output list.
+    y_out.append(a0+senos+cosenos)     # store the value of yi in the y axis output list.
+
+# end of file. This comment is not needed, it is here to show that this file was not truncated.
+

@@ -1,0 +1,34 @@
+# Este archivo es el que define las variables y los cálculos que van a graficarse en el programa.
+
+@CLASS          # Este es el nombre del tipo de variable o modelo. 
+                # No debe repetirse con otro porque sino es sobreescrito.
+nombre = Polinomial
+
+
+@ATTRIBUTES     # A continuación van las variables, después de la palabra clave ATTRIBUTES:
+
+x = 0.0          // Variable independiente
+a0 = 0.0         // Constante.        
+a1 = 0.0         // Coeficiente de x^1        # Y acá van comentarios al dope.
+a2 = 0.0         // Coeficiente de x^2
+a3 = 0.0         // Coeficiente de x^3
+a4 = 0.0         // Coeficiente de x^4
+a5 = 0.0         // Coeficiente de x^5
+a6 = 0.0         // Coeficiente de x^6
+
+@INDEPVAR      # Acá se explicita cuál es la variable independiente, 
+x              # la que va a estar definida por un rango de datos, 
+               # mediante un tipo de datos 'lista'.
+
+
+@EVAL          # las variables x_out e y_out son listas de salida de datos en (x,y) obligatorias.
+
+for xi in x:
+
+    y = a0 + a1*xi + a2*xi**2 + a3*xi**3 + a4*xi**4 + a5*xi**5 + a6*xi**6
+    
+    x_out.append(xi)    # esto almacena el valor de xi en la lista de salida de las x.
+    y_out.append(y)     # esto almacena el valor de xi en la lista de salida de las y.
+    
+# fin del archivo. (este comentario no es necesario, está acá para indicar lo que es y que el archivo no está trunco)
+

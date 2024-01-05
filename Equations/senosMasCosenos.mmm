@@ -1,0 +1,64 @@
+# Este archivo es el que define las variables y los cálculos que van a graficarse en el programa.
+
+@CLASS          # Este es el nombre del tipo de variable o modelo. 
+                # No debe repetirse con otro porque sino es sobreescrito.
+nombre = SenosMasCosenos
+
+
+@ATTRIBUTES     # A continuación van las variables, después de la palabra clave ATTRIBUTES:
+
+t = 0.0          // Tiempo
+w = 0.0          // Frecuencia fundamental, en rad/tiempo.
+
+a0 = 0.0         // Amplitud constante (w=0).
+
+a1 = 0.0         // Amplitud de sen(wt) 
+b1 = 0.0         // Amplitud de cos(wt)
+
+a2 = 0.0         // Amplitud de sen(2wt) 
+b2 = 0.0         // Amplitud de cos(2wt)
+
+a3 = 0.0         // Amplitud de sen(3wt) 
+b3 = 0.0         // Amplitud de cos(3wt)
+
+a4 = 0.0         // Amplitud de sen(4wt) 
+b4 = 0.0         // Amplitud de cos(4wt)
+
+a5 = 0.0         // Amplitud de sen(5wt) 
+b5 = 0.0         // Amplitud de cos(5wt)
+
+a6 = 0.0         // Amplitud de sen(6wt) 
+b6 = 0.0         // Amplitud de cos(6wt)
+
+a7 = 0.0         // Amplitud de sen(7wt) 
+b7 = 0.0         // Amplitud de cos(7wt)
+
+a8 = 0.0         // Amplitud de sen(8wt) 
+b8 = 0.0         // Amplitud de cos(8wt)
+
+a9 = 0.0         // Amplitud de sen(9wt) 
+b9 = 0.0         // Amplitud de cos(9wt)
+
+a10 = 0.0         // Amplitud de sen(10wt) 
+b10 = 0.0         // Amplitud de cos(10wt)
+
+
+@INDEPVAR      # Acá se explicita cuál es la variable independiente, 
+t              # la que va a estar definida por un rango de datos, 
+               # mediante un tipo de datos 'lista'.
+
+
+
+@EVAL          # las variables x_out e y_out son listas de salida de datos en (x,y) obligatorias.
+
+for ti in t:
+    
+    senos = a1*np.sin(w*ti)+a2*np.sin(2*w*ti)+a3*np.sin(3*w*ti)+a4*np.sin(4*w*ti)+a5*np.sin(5*w*ti)+a6*np.sin(6*w*ti)+a7*np.sin(7*w*ti)+a8*np.sin(8*w*ti)+a9*np.sin(9*w*ti)+a10*np.sin(10*w*ti)
+    
+    cosenos = b1*np.cos(w*ti)+b2*np.cos(2*w*ti)+b3*np.cos(3*w*ti)+b4*np.cos(4*w*ti)+b5*np.cos(5*w*ti)+b6*np.cos(6*w*ti)+b7*np.cos(7*w*ti)+b8*np.cos(8*w*ti)+b9*np.cos(9*w*ti)+b10*np.cos(10*w*ti)
+    
+    x_out.append(ti)    # esto almacena el valor de xi en la lista de salida de las x.
+    y_out.append(a0+senos+cosenos)     # esto almacena el valor de xi en la lista de salida de las y.
+
+# fin del archivo. (este comentario no es necesario, está acá para indicar lo que es y que el archivo no está trunco)
+
