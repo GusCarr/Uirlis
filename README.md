@@ -16,6 +16,22 @@
     
     Copyright (C) 2016  Gustavo E. Carr
     
+    Huge thanks to the late Felipe Evans, Msc. Eng. for long hours chatting and teaching
+    me about programming among many other interesting topics.
+
+
+    IMPORTANT NOTICE:
+    This program was written during the second half of 2015 and january 2016 using
+    the matplotlib and gtk frameworks running under Python 2.7.1. No updates or 
+    upgrades have been done since then because the author changed his work direction
+    from Fatigue to Computational Mechanics and such, so this was discontinued due 
+    to lack of time and need. Since then, both Python and the mentioned frameworks 
+    changed versions many times, so this is not expected to run out of the box.
+    Moreover, this tool (Uirlis) was intended to be just a tool and a way to learn
+    more Python language.
+    Should anyone have the time and will to upgrade this, they're welcome to do so,
+    and the author will be deeply grateful for he does not have the spare time 
+    required for the task.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
