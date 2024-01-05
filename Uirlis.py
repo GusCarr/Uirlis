@@ -718,13 +718,12 @@ import csv                      # reading and writing .csv files.
 
 import string
 import numpy as np
-#~ import QtHerramientas2015
+
 import pygtk
 pygtk.require('2.0')
-#~ import gobject
+
 import gtk                 # pygtk version: Maik Hertha <maik.hertha@berlin.de>
 
-#~ import pylab as plt
 
 import matplotlib as mpl
 
@@ -734,7 +733,6 @@ import matplotlib.pyplot as plt
 
 from matplotlib.figure import Figure
 
-#~ import matplotlib.backends.backend_gtkagg
 from matplotlib.backends.backend_gtkagg import FigureCanvasGTKAgg as FigureCanvas
 
 # import the navigation toolbar.
